@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+h1, h2 {
+    margin: 20px 0;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.rating {
+    color: gold;
+    font-size: 20px;
+}
+
+#courses .card {
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 50px;
+}
+
+.modal .modal-title {
+    font-weight: bold;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Online</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="bg-dark text-white p-3 text-center">
+        <h1>Learn Online</h1>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="course-search" class="container mt-5">
+        <div class="input-group mb-3">
+            <input type="text" id="searchInput" class="form-control" placeholder="Search for a course...">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button" onclick="filterCourses()">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="container mt-5">
+        <h2 class="text-center">Our Courses</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Development</h5>
+                        <div class="rating">
+                            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+                        </div>
+                        <p class="card-text">Learn HTML, CSS, and JavaScript.</p>
+                        <p class="card-text">Price: <span class="course-price">$200</span></p>
+                        <a href="#" class="btn btn-primary" onclick="showCourseDetails('Web Development', 'Learn HTML, CSS, and JavaScript.', '$200')">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Science</h5>
+                        <div class="rating">
+                            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                        </div>
+                        <p class="card-text">Analyze data using Python and R.</p>
+                        <p class="card-text">Price: <span class="course-price">$250</span></p>
+                        <a href="#" class="btn btn-primary" onclick="showCourseDetails('Data Science', 'Analyze data using Python and R.', '$250')">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Digital Marketing</h5>
+                        <div class="rating">
+                            <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                        </div>
+                        <p class="card-text">Master social media and content marketing.</p>
+                        <p class="card-text">Price: <span class="course-price">$150</span></p>
+                        <a href="#" class="btn btn-primary" onclick="showCourseDetails('Digital Marketing', 'Master social media and content marketing.', '$150')">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="container mt-5">
+        <h2 class="text-center">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="card">
+                <div class="card-header" id="faqHeadingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                            What is the refund policy?
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="faqCollapseOne" class="collapse show" aria-labelledby="faqHeadingOne" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        You can request a refund within 30 days of purchase.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="faqHeadingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                            Do I have lifetime access to the courses?
+                        </button>
+                    </h5>
+                </div>
+                <div id="faqCollapseTwo" class="collapse" aria-labelledby="faqHeadingTwo" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Yes, once you purchase a course, you have lifetime access.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="container mt-5">
+        <h2 class="text-center">What Our Students Say</h2>
+        <div class="carousel slide" id="testimonialCarousel" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">This course changed my life!</p>
+                        <footer class="blockquote-footer">John Doe</footer>
+                    </blockquote>
+                </div>
+                <div class="carousel-item">
+                    <blockquote class="blockquote text-center">
+                        <p class="mb-0">Excellent content and great instructors.</p>
+                        <footer class="blockquote-footer">Jane Smith</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="course-video" class="container mt-5">
+        <h2 class="text-center">Course Preview</h2>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="newsletter" class="container mt-5">
+        <h2 class="text-center">Stay Updated</h2>
+        <p class="text-center">Subscribe to our newsletter for the latest courses.</p>
+        <form class="form-inline justify-content-center">
+            <input type="email" class="form-control mb-2 mr-sm-2" id="newsletterEmail" placeholder="Enter your email">
+            <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+        </form>
+    </section>
+
+    <footer class="bg-dark text-white text-center p-3">
+        <p>&copy; 2024 Learn Online. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="courseModal" tabindex="-1" role="dialog" aria-labelledby="courseModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="courseModalLabel">Course Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalCourseDescription"></p>
+                    <p>Price: <span id="modalCoursePrice"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
